@@ -17,21 +17,23 @@
     </head>
     <body>
         <script type="text/javascript">
-            		
+         			
 			var dataset = [ 5, 10, 15, 20, 25 ];
 			
 			d3.select("body").selectAll("div")
 				.data(dataset)
 				.enter()
 				.append("div")
-				.attr("class", "bar");
-			
-		
+				.attr("class", "bar")
+				.style("height", function(d) {
+					return d + "px";
+				});
+									
         </script>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
+        <div class="bar" style="height: 5px;"></div>
+        <div class="bar" style="height: 10px;"></div>
+        <div class="bar" style="height: 15px;"></div>
+        <div class="bar" style="height: 20px;"></div>
+        <div class="bar" style="height: 25px;"></div>
     </body>
 </html>     
